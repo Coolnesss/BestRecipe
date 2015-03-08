@@ -1,6 +1,5 @@
 class RecipeIngredientsController < ApplicationController
   before_action :set_recipe_ingredient, only: [:show, :edit, :update, :destroy]
-  layout 'cyborg'
   # GET /recipe_ingredients
   # GET /recipe_ingredients.json
   def index

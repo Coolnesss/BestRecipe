@@ -1,6 +1,20 @@
 <%# navigation styled for Bootstrap 3.0 %>
-<ul class="nav nav-tabs">
-  <li role="presentation"><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
-  <li role="presentation"><%= link_to 'Recipes', recipes_path, class: 'navbar-brand' %></li>
-  <li role="presentation"><%= link_to 'Ingredients', ingredients_path, class: 'navbar-brand' %></li>
-</ul>
+<div class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">BestRecipe</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class="active"><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'Recipes', recipes_path %></li>
+        <li><%= link_to 'Ingredients', ingredients_path %></li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</div>
