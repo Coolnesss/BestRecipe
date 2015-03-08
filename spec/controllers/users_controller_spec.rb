@@ -14,12 +14,15 @@ RSpec.describe UsersController do
     end
   end
 
-  describe "GET create" do
+  describe "POST users" do
     it "creates user" do
       user = User.create(username:"asdasd", password:"asdasd", password_confirmation:"asdasd")
       expect(User.count).to eq(1)
-
     end
 
+    it "doesn't create bad user" do
+      user = User.create(username:"a", password:"asdasd", password_confirmation:"asdasd")
+      expect(User.count).to eq(0)
+    end
   end
 end

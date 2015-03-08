@@ -10,6 +10,7 @@ deploy:
   provider: heroku
   api_key:
     secure: UCfAp8WiFvJLL0MB6Q6JP/uFToFiAx7BIPIXE6Wpx3ggpCq1dkcXbz1ZypLrXdueg5Z1pmcXNihGlTHvoJ/m7i4TVpOu4srJtHo9HpONqFylndrKJGQfCakvWXmlNA+xYoNukwkDYJ4NPCaiY6uyrx7GGL/+rMJrVsSEhxu90sg=
+  run: "rake db:migrate"
   app: bestrecipe
   on:
     repo: Coolnesss/BestRecipe

@@ -5,8 +5,12 @@
     <%= f.text_field :username, :class => 'form-control' %>
   </div>
   <div class="form-group">
-    <%= f.label :password_digest, :class => 'control-label' %>
-    <%= f.text_field :password_digest, :class => 'form-control' %>
+    <%= f.label :password, :class => 'control-label' %>
+    <%= f.text_field :password, :class => 'form-control' %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password_confirmation, :class => 'control-label' %>
+    <%= f.text_field :password_confirmation, :class => 'form-control' %>
   </div>
 
   <div class="form-actions">
