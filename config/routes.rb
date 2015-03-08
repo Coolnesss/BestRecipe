@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'welcome/index'
+
   resources :users
 
   resources :recipe_ingredients
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :recipes
 
-  root 'recipes#index'
+  root 'welcome#index'
 
   get 'signup', to: 'users#new'
   resource :session, only: [:new, :create, :delete]
