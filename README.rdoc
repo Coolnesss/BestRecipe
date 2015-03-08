@@ -1,6 +1,8 @@
 == README
 
-This will be the best recipe thing by Chang!
+[![Build Status](https://travis-ci.org/Coolnesss/BestRecipe.svg)](https://travis-ci.org/Coolnesss/BestRecipe/)
+
+This will be the best recipe thing by Chang and Juho!
 
 
 This README would normally document whatever steps are necessary to get the
