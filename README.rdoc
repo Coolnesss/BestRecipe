@@ -1,6 +1,8 @@
 == README
 
 [![Build Status](https://travis-ci.org/Coolnesss/BestRecipe.svg?branch=master)](https://travis-ci.org/Coolnesss/BestRecipe)
+[![Code Climate](https://codeclimate.com/github/Coolnesss/BestRecipe/badges/gpa.svg)](https://codeclimate.com/github/Coolnesss/BestRecipe)
+
 This will be the best recipe thing by Chang and Juho!
 
 
