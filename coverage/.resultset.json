@@ -17,13 +17,23 @@
         1,
         null
       ],
+      "/home/chang/BestRecipe/app/models/ingredient.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        null
+      ],
       "/home/chang/BestRecipe/app/models/recipe.rb": [
         1,
         1,
         1,
+        null,
+        1,
         null
       ]
     },
-    "timestamp": 1425830615
+    "timestamp": 1425836195
   }
 }

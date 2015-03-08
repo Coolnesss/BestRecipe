@@ -2,13 +2,12 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
+<div class="col-md-6 col-md-offset-3">
 <table class="table table-striped">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:name) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
@@ -16,9 +15,7 @@
     <% @recipes.each do |recipe| %>
       <tr>
         <td><%= link_to recipe.id, recipe_path(recipe) %></td>
-        <td><%= recipe.description %></td>
         <td><%= recipe.name %></td>
-        <td><%=l recipe.created_at %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_recipe_path(recipe), :class => 'btn btn-primary btn-xs' %>
@@ -32,7 +29,10 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
+<div class="col-md-6 col-md-offset-3">
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_recipe_path,
             :class => 'btn btn-primary' %>
+</div>
