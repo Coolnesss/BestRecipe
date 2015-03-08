@@ -2,19 +2,32 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
       <a class="navbar-brand" href="#">BestRecipe</a>
     </div>
-    <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Recipes', recipes_path %></li>
         <li><%= link_to 'Ingredients', ingredients_path %></li>
       </ul>
-    </div><!--/.nav-collapse -->
+
+     <% if not current_user.nil? %>
+        <div class="navbar-right">
+          <div class="btn-group">
+            <a aria-expanded="false" href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+              <%= current_user.username %>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu">
+              <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+            </ul>
+          </div>
+        </div>
+      <% else %>
+        <li class="navbar-right"><%= button_to "Sign in", signin_path, :class => "btn btn-default navbar-btn", :method => :get %></li>
+        <li class="navbar-right"><%= button_to "Sign up", signup_path, :class => "btn btn-default navbar-btn", :method => :get %></li>
+      <% end %>
+
+
   </div>
 </div>
