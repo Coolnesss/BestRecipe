@@ -59,6 +59,10 @@ group :development do
   gem 'rails_layout'
 end
 
+# Code Climates test coverage information
+gem 'codeclimate-test-reporter', group: :test, require: nil
+
+
 # twitter bootstrap css & javascript toolkit
 gem 'twitter-bootswatch-rails', '~> 3.3.2'
 
