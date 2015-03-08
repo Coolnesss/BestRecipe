@@ -47,6 +47,7 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
   gem 'better_errors'
+  gem 'simplecov', require: false
 end
 
 group :production do
