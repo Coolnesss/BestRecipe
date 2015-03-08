@@ -1,8 +1,4 @@
 <%- model_class = Recipe -%>
-<%= stylesheet_link_tag "cyborg", :media => "all" %>
-
-<%= yield(:page_stylesheet) if content_for?(:page_stylesheet) %>
-
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 </div>
