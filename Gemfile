@@ -46,11 +46,17 @@ group :development, :test do
   #db for local
   gem 'sqlite3'
   gem 'rspec-rails', '~> 3.0'
+  gem 'better_errors'
 end
 
 group :production do
   gem 'pg'
   gem 'rails_12factor'
+end
+
+gem 'bootstrap-sass'
+group :development do
+  gem 'rails_layout'
 end
 
 ruby '2.2.0'
