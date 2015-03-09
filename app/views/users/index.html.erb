@@ -8,18 +8,16 @@
 <table class="table table-hover">
   <thead>
     <tr>
-      <th><%= model_class.human_attribute_name(:id) %></th>
       <th><%= model_class.human_attribute_name(:username) %></th>
-      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th>Recipes</th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
   </thead>
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= link_to user.id, user_path(user) %></td>
         <td><%= link_to user.username, user_path(user) %></td>
-        <td><%=l user.created_at %></td>
+        <td><span class="badge"><%= user.recipes.count %></span></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_user_path(user), :class => 'btn btn-primary btn-xs' %>
@@ -33,9 +31,4 @@
     <% end %>
   </tbody>
 </table>
-</div>
-<div class="col-md-6 col-md-offset-3">
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_user_path,
-            :class => 'btn btn-primary' %>
 </div>

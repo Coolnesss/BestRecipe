@@ -115,6 +115,10 @@
         0,
         null,
         null,
+        1,
+        0,
+        null,
+        null,
         null
       ],
       "/home/chang/BestRecipe/app/controllers/welcome_controller.rb": [
@@ -136,13 +140,17 @@
         1,
         1,
         1,
+        1,
         null,
+        1,
         1,
         null
       ],
       "/home/chang/BestRecipe/app/models/user.rb": [
         1,
         1,
+        1,
+        null,
         null,
         1,
         null,
@@ -150,6 +158,6 @@
         null
       ]
     },
-    "timestamp": 1425858821
+    "timestamp": 1425908709
   }
 }

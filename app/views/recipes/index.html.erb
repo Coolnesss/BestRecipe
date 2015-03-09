@@ -11,8 +11,8 @@
 
     <div class="col-sm-4">
       <div class="panel panel-primary">
-        <div class="panel-heading">
-          <h3 class="panel-title"><%= link_to recipe.name, recipe %></h3>
+        <div class="panel-heading clickable">
+          <h3 class="panel-title"><strong style="color:grey"><%= link_to recipe.name, recipe %></strong> by <%= link_to recipe.user.username, recipe.user %></h3>
         </div>
         <div class="panel-body">
           <%= recipe.description %>
@@ -20,11 +20,4 @@
       </div>
     </div>
   <% end %>
-</div>
-<div class="col-md-6 col-md-offset-3">
-<% if not current_user.nil? %>
-<%= link_to t('.new', :default => t("helpers.links.new")),
-            new_recipe_path,
-            :class => 'btn btn-primary' %>
-<% end %>
 </div>
