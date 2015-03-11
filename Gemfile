@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# Ruby version
+ruby '2.2.0'
+
+gem 'omniauth-github'
 
 gem 'rb-readline'
 
@@ -72,5 +76,3 @@ gem 'twitter-bootswatch-rails-helpers'
 
 gem 'jquery-turbolinks'
 gem 'bcrypt', '~> 3.1.7'
-
-ruby '2.2.0'
