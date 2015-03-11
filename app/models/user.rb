@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
 
   validates :username,
       uniqueness: true,
-      length: { in: 5..20 }
+      length: { in: 4..20 }
 end
