@@ -25,4 +25,5 @@ RSpec.describe UsersController do
       expect(User.count).to eq(0)
     end
   end
+
 end
