@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
-  before_action :ensure_that_signed_in, except: [:index, :show]
-  
+  before_action :ensure_that_signed_in, except: [:index, :show, :new]
+
   # GET /users
   # GET /users.json
   def index
