@@ -7,9 +7,43 @@
     <%= f.text_field :name, :class => 'form-control' %>
   </div>
 
-  <div class="input-group has-feedback">
-    <input type="text" class="form-control" placeholder="Search">
-    <i class="glyphicon glyphicon-search form-control-feedback"></i>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js"></script>
+  <script>
+
+  var myApp = angular.module('myApp', []);
+
+  myApp.controller("IngredientsController", function ($scope, $http) {
+    $http.get("<%= asset_path('ingredients.json')%>").success( function(data, status, headers, config) {
+      $scope.ingredients = data;
+    });
+
+    $scope.order = 'name';
+
+    $scope.sort_by = function (order){
+      $scope.order = order;
+      console.log(order);
+    }
+
+    $scope.searchText = '';
+  });
+  </script>
+
+
+  <div ng-app="myApp" ng-controller="IngredientsController">
+
+    <div class="input-group has-feedback">
+      <input ng-model="searchText" class="form-control" placeholder="Search">
+      <i class="glyphicon glyphicon-search form-control-feedback"></i>
+    </div>
+
+    <table class="table table-hover">
+      <thead>
+        <th> <a ng-click="sort_by('name')">name</a> </th>
+      </thead>
+      <tr ng-repeat="ingredient in ingredients| orderBy:order | filter:searchText">
+        <td>{{ingredient.name}}</td>
+      </tr>
+    </table>
   </div>
 
   <div class="form-group">
