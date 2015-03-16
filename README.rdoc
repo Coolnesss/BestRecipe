@@ -8,3 +8,5 @@
 This will be the best recipe thing by Chang and Juho!
 
 https://bestrecipe.herokuapp.com/
+
+{Trello board}[https://trello.com/b/BwtZyRGY/bestrecipe]
