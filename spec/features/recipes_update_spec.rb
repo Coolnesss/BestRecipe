@@ -25,5 +25,15 @@ describe "Recipes update page" do
 
   end
 
+  it "can not update recipe name to be empty" do
+    visit edit_recipe_path(1)
+
+    fill_in('Name', with:'')
+
+    expect {
+      click_button('Update Recipe')
+    }.not_to change{Recipe.first.updated_at}
+  end
+
 
 end
