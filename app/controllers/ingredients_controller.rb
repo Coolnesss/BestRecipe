@@ -1,7 +1,8 @@
 class IngredientsController < ApplicationController
   before_action :set_ingredient, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_signed_in, except: [:index, :show]
-  
+  before_action :ensure_that_admin, only: [:destroy]
+
   # GET /ingredients
   # GET /ingredients.json
   def index

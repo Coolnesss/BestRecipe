@@ -13,7 +13,7 @@
   var myApp = angular.module('myApp', []);
 
   myApp.controller("IngredientsController", function ($scope, $http) {
-    $http.get("<%= asset_path('ingredients.json')%>").success( function(data, status, headers, config) {
+    $http.get("<%= ingredients_path(format: :json)%>").success( function(data, status, headers, config) {
       $scope.ingredients = data;
     });
 

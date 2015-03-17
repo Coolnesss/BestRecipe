@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
   before_action :ensure_that_signed_in, except: [:index, :show]
+  before_action :ensure_that_admin, only: [:destroy, :edit, :update]
   # GET /recipes
   # GET /recipes.json
   def index
