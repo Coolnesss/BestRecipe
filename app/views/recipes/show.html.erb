@@ -5,11 +5,27 @@
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @recipe.description %></dd>
+  <dd><%= simple_format(@recipe.description) %></dd>
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @recipe.name %></dd>
 </dl>
+<h2 class="text-center"> Ingredients: </h2>
+<div class="col-md-6 col-md-offset-3">
+  <table class="table table-hover">
+    <thead>
+      <tr>Name</tr>
+    </thead>
+    <tbody>
+      <% @recipe.recipe_ingredients.each do |ri| %>
+        <tr>
+          <td> <%= ri.ingredient.name %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 
+<div class="col-md-6 col-md-offset-3">
 <div class="form-actions">
   <%= link_to t('.back', :default => t("helpers.links.back")),
               recipes_path, :class => 'btn'  %>
@@ -20,4 +36,5 @@
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
               :class => 'btn btn-danger' %>
+</div>
 </div>

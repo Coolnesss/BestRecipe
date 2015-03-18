@@ -278,8 +278,19 @@
         null,
         null,
         null
+      ],
+      "/home/chang/BestRecipe/app/models/recipe_ingredient.rb": [
+        1,
+        1,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1426599080
+    "timestamp": 1426685957
   }
 }
