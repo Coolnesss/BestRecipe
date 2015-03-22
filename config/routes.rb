@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   get 'signin', to: 'sessions#new'
   delete 'signout', to: 'sessions#destroy'
   get 'auth/:provider/callback', to: 'sessions#create_oauth'
-
+  # get 'authFB/:provider/callback', to: 'sessions#create_facebook_oauth'
+  # get 'authFB/:provider/callback', to: 'sessions#create_facebook_oauth'
+  match 'authFB/:provider/callback' => 'sessions#create_facebook_oauth', via: [:get, :post]
+  match 'auth/failure', to: redirect('/'), via: [:get, :post]
+  match 'authFB/failure', to: redirect('/'), via: [:get, :post]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
