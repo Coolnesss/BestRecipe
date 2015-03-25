@@ -133,6 +133,8 @@ GEM
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
+    omniauth-facebook (2.0.1)
+      omniauth-oauth2 (~> 1.2)
     omniauth-github (1.1.2)
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.1)
@@ -266,6 +268,8 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   launchy
+  omniauth
+  omniauth-facebook
   omniauth-github
   pg
   rails (= 4.2.0)

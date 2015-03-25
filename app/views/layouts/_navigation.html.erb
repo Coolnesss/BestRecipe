@@ -1,3 +1,12 @@
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=367532616766098&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <%# navigation styled for Bootstrap 3.0 %>
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -28,8 +37,8 @@
           </div>
         </div>
       <% else %>
-        <ul>
-          <li class="navbar-right"><%= button_to "Sign in with Github", 'auth/github', :class => "btn btn-primary navbar-btn" %></li>
+        <ul style="list-style: none;">
+          <li class="navbar-right"> <div fb-login-button data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></li>
           <li class="navbar-right"><%= button_to "Sign in", signin_path, :class => "btn btn-default navbar-btn", :method => :get %></li>
           <li class="navbar-right"><%= button_to "Sign up", signup_path, :class => "btn btn-default navbar-btn", :method => :get %></li>
         </ul>

@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 # Ruby version
 ruby '2.2.0'
 
+gem 'omniauth'
+gem 'omniauth-facebook'
 gem 'omniauth-github'
 
 gem 'rb-readline'
