@@ -7,17 +7,26 @@
   <%= form_tag session_path do %>
 
 
-  <div class="form-group">
-    username <%= text_field_tag :username, params[:username] %>
+  <div class="input-group margin-bottom-sm">
+    <span class="input-group-addon"><i class="fa fa-user fa-fw"></i></span>
+    <%= text_field_tag :username, params[:username], class: "form-control", placeholder:"Username" %>
   </div>
-  <div class="form-group">
-    password <%= password_field_tag :password, params[:password] %>
+  <div class="input-group margin-bottom-sm">
+    <span class="input-group-addon"><i class="fa fa-key fa-fw"></i></span>
+    <%= password_field_tag :password, params[:password], class: "form-control",  placeholder:"Password" %>
   </div>
-    <%= submit_tag "Log in", :class => "btn btn-primary" %>
+    <%= submit_tag "Log in", :class => "btn btn-default" %>
   <% end %>
-<br>
+  <br>
+  <div class="col-md-6">
+    <%= button_to 'auth/facebook', class:"btn btn-facebook" do %>
+      <i class="fa fa-facebook"></i>
+      Sign in with Facebook
+    <% end %>
 
-  <%= button_to "Sign in with Github", 'auth/github', :class => "btn btn-primary navbar-btn" %>
-  <%= button_to "Sign in with Facebook", 'auth/facebook', id: "facebook_sign_in", :class => "btn btn-primary navbar-btn" %>
-
+    <%= button_to 'auth/github', class:"btn btn-github" do %>
+      <i class="fa fa-github"></i>
+      Sign in with Github
+    <% end %>
+  </div>
 </div>
