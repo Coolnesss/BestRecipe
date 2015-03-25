@@ -162,6 +162,17 @@
         1,
         null,
         null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        null,
         null
       ],
       "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/controllers/recipes_controller.rb": [
@@ -263,25 +274,13 @@
         1,
         null,
         null,
-        1,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        null,
-        0,
-        0,
-        0,
-        null,
-        null,
         null,
         1,
-        null,
-        null,
+        0,
+        0,
         null,
         0,
+        null,
         0,
         0,
         0,
@@ -308,6 +307,6 @@
         null
       ]
     },
-    "timestamp": 1426983740
+    "timestamp": 1427294240
   }
 }

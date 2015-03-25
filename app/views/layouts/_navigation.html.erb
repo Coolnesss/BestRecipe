@@ -39,8 +39,6 @@
       <% else %>
         <ul style="list-style: none;">
           <li class="navbar-right"> <div fb-login-button data-max-rows="1" data-size="large" data-show-faces="false" data-auto-logout-link="true"></div></li>
-          <li class="navbar-right"><%= button_to "Sign in with Github", 'auth/github', :class => "btn btn-primary navbar-btn" %></li>
-          <li class="navbar-right"><%= button_to "Sign in with Facebook", 'authFB/facebook', id: "facebook_sign_in", :class => "btn btn-primary navbar-btn" %></li>
           <li class="navbar-right"><%= button_to "Sign in", signin_path, :class => "btn btn-default navbar-btn", :method => :get %></li>
           <li class="navbar-right"><%= button_to "Sign up", signup_path, :class => "btn btn-default navbar-btn", :method => :get %></li>
         </ul>
