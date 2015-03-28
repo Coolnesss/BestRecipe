@@ -5,12 +5,9 @@ RSpec.describe "users/show", type: :view do
     @user = assign(:user, User.create!(
       :username => "Username",
       :password => "asdasd",
-      :password_confirmation => "asdasd"
+      :password_confirmation => "asdasd",
+      :admin => true
     ))
   end
 
-  it "renders attributes in <p>" do
-    render
-    expect(rendered).to match(/Username/)
-  end
 end
