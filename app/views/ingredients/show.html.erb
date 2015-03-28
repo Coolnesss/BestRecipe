@@ -2,20 +2,26 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
 </div>
+<br>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @ingredient.name %></dd>
 </dl>
+<br>
 
-<div class="form-actions">
+<div class="form-actions text-center">
   <%= link_to t('.back', :default => t("helpers.links.back")),
-              ingredients_path, :class => 'btn'  %>
-  <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_ingredient_path(@ingredient), :class => 'btn btn-primary' %>
-  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
-              ingredient_path(@ingredient),
-              :method => 'delete',
-              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              ingredients_path, :class => 'btn' %>
+  <% if not current_user.nil? %>
+      <% if not current_user.admin.nil? %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_ingredient_path(@ingredient), :class => 'btn btn-primary' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      ingredient_path(@ingredient),
+                      :method => 'delete',
+                      :data => {:confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?'))},
+                      :class => 'btn btn-danger' %>
+      <% end %>
+  <% end %>
 </div>
