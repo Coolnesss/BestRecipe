@@ -30,6 +30,8 @@ Rails.application.configure do
   # Attempting to fix javascripts
   config.assets.compress = true
 
+  # set the relative root, because we're deploying to /
+  config.action_controller.relative_url_root  = "/"
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = true

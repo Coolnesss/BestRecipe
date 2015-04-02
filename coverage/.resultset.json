@@ -1,31 +1,31 @@
 {
   "RSpec": {
     "coverage": {
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/helpers/application_helper.rb": [
+      "/home/chang/BestRecipe/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/helpers/ingredients_helper.rb": [
+      "/home/chang/BestRecipe/app/helpers/ingredients_helper.rb": [
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/helpers/recipe_ingredients_helper.rb": [
+      "/home/chang/BestRecipe/app/helpers/recipe_ingredients_helper.rb": [
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/helpers/recipes_helper.rb": [
+      "/home/chang/BestRecipe/app/helpers/recipes_helper.rb": [
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/helpers/users_helper.rb": [
+      "/home/chang/BestRecipe/app/helpers/users_helper.rb": [
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/helpers/welcome_helper.rb": [
+      "/home/chang/BestRecipe/app/helpers/welcome_helper.rb": [
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/controllers/users_controller.rb": [
+      "/home/chang/BestRecipe/app/controllers/users_controller.rb": [
         1,
         1,
         1,
@@ -106,7 +106,7 @@
         null,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/controllers/application_controller.rb": [
+      "/home/chang/BestRecipe/app/controllers/application_controller.rb": [
         1,
         null,
         null,
@@ -129,14 +129,14 @@
         null,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/controllers/welcome_controller.rb": [
+      "/home/chang/BestRecipe/app/controllers/welcome_controller.rb": [
         1,
         1,
         1,
         null,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/models/ingredient.rb": [
+      "/home/chang/BestRecipe/app/models/ingredient.rb": [
         1,
         1,
         1,
@@ -144,7 +144,7 @@
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/models/recipe.rb": [
+      "/home/chang/BestRecipe/app/models/recipe.rb": [
         1,
         1,
         1,
@@ -154,7 +154,7 @@
         1,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/models/user.rb": [
+      "/home/chang/BestRecipe/app/models/user.rb": [
         1,
         1,
         1,
@@ -176,7 +176,7 @@
         null,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/controllers/recipes_controller.rb": [
+      "/home/chang/BestRecipe/app/controllers/recipes_controller.rb": [
         1,
         1,
         1,
@@ -253,7 +253,7 @@
         null,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/controllers/sessions_controller.rb": [
+      "/home/chang/BestRecipe/app/controllers/sessions_controller.rb": [
         1,
         1,
         null,
@@ -296,7 +296,7 @@
         null,
         null
       ],
-      "/home/jkostet/KOODIS/RESEPTI/BestRecipe/app/models/recipe_ingredient.rb": [
+      "/home/chang/BestRecipe/app/models/recipe_ingredient.rb": [
         1,
         1,
         1,
@@ -308,6 +308,6 @@
         null
       ]
     },
-    "timestamp": 1427574752
+    "timestamp": 1427990913
   }
 }

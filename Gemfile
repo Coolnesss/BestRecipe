@@ -9,6 +9,7 @@ gem 'omniauth-github'
 gem 'bootstrap-social-rails'
 gem 'rb-readline'
 gem 'font-awesome-rails'
+gem 'font_assets'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.0'
