@@ -1,18 +1,19 @@
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 <%- model_class = Recipe -%>
 <div class="page-header">
-  <h1 style="font-family:Ubuntu"><%= @recipe.name %></h1>
+  <h1 style="font-family:Indie Flower"><%= @recipe.name %></h1>
   <h6 class="text-center">By: <%= link_to @recipe.user.username, @recipe.user %></span></h6>
 </div>
 
 
   <br>
   <div class="col-md-offset-1">
-    <h2><strong>Instructions:</strong></h2>
-    <h3 style="font-family:Ubuntu"><%= simple_format(@recipe.description, :class => "h3", :style => "font-family:Ubuntu") %></h3>
+    <h2 style="font-family:Ubuntu">Instructions</h2>
+    <h3 style="font-family:Indie Flower"><%= simple_format(@recipe.description, :class => "h3", :style => "font-family:Indie Flower") %></h3>
   </div>
   <br>
 <div class="col-md-6 col-md-offset-3">
-  <h2><strong> Ingredients: </strong></h2>
+  <h2 style="font-family:Ubuntu">Ingredients</h2>
 
   <table class="table table-hover">
     <thead>

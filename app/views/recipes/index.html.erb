@@ -1,6 +1,7 @@
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 <%- model_class = Recipe -%>
 <div class="page-header">
-  <h1 style: "font-family:Ubuntu"!important;><span class="glyphicon glyphicon-cutlery" aria-hidden="true"><%=t '.title', :default => model_class.model_name.human.pluralize %></span></h1>
+  <h1 style="font-family:Indie Flower">Recipes</h1>
   <h6 class="text-center">Recipes in database: <span class="badge"><%= @recipes.count %></span></h6>
 </div>
 
@@ -11,9 +12,9 @@
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading clickable">
-          <h3 class="panel-title"><strong style="color:grey"><%= link_to recipe.name, recipe, style:'color:#161616' %></strong> by <%= link_to recipe.user.username, recipe.user %></h3>
+          <h3 style="font-family:Indie Flower" class="panel-title"><strong style="color:grey"><%= link_to recipe.name, recipe, style:'color:#161616' %></strong> by <%= link_to recipe.user.username, recipe.user %></h3>
         </div>
-        <div class="panel-body">
+        <div style="font-family:Indie Flower" class="panel-body">
           <%= recipe.description %>
         </div>
       </div>
