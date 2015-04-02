@@ -13,7 +13,9 @@
  *= require_tree .
  *= require_self
  *= require bootstrap-social
+ *= require font-awesome
  */
+@import "font-awesome";
 main { background-color:
    black !important;
 }
