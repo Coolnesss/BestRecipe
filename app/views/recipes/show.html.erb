@@ -1,16 +1,19 @@
 <%- model_class = Recipe -%>
 <div class="page-header">
-  <h1><%= @recipe.name %></h1>
+  <h1 style="font-family:Ubuntu"><%= @recipe.name %></h1>
   <h6 class="text-center">By: <%= link_to @recipe.user.username, @recipe.user %></span></h6>
 </div>
 
-<dl class="dl-horizontal">
+
   <br>
-  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= simple_format(@recipe.description) %></dd>
-</dl>
-<h2 class="text-center"> Ingredients: </h2>
+  <div class="col-md-offset-1">
+    <h2><strong>Instructions:</strong></h2>
+    <h3 style="font-family:Ubuntu"><%= simple_format(@recipe.description, :class => "h3", :style => "font-family:Ubuntu") %></h3>
+  </div>
+  <br>
 <div class="col-md-6 col-md-offset-3">
+  <h2><strong> Ingredients: </strong></h2>
+
   <table class="table table-hover">
     <thead>
       <!--<tr>Name</tr>-->

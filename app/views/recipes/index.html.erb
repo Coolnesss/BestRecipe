@@ -1,6 +1,6 @@
 <%- model_class = Recipe -%>
 <div class="page-header">
-  <h1><span class="glyphicon glyphicon-cutlery" aria-hidden="true"><%=t '.title', :default => model_class.model_name.human.pluralize %></span></h1>
+  <h1 style: "font-family:Ubuntu"!important;><span class="glyphicon glyphicon-cutlery" aria-hidden="true"><%=t '.title', :default => model_class.model_name.human.pluralize %></span></h1>
   <h6 class="text-center">Recipes in database: <span class="badge"><%= @recipes.count %></span></h6>
 </div>
 
@@ -8,7 +8,6 @@
 
 <div class="container-fluid">
     <% @recipes.each do |recipe| %>
-
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading clickable">
