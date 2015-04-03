@@ -29,6 +29,7 @@ class RecipesController < ApplicationController
     @recipe.user = current_user
     respond_to do |format|
       if @recipe.save
+        RecipeIngredient.massCreate(@recipe.id, params[:ingredients])
         format.html { redirect_to @recipe, notice: 'Recipe was successfully created.' }
         format.json { render :show, status: :created, location: @recipe }
       else

@@ -1,10 +1,10 @@
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 <%= form_for @recipe, :html => { :class => 'form-horizontal' } do |f| %>
 
 <div class="col-md-6 col-md-offset-3">
-
+  <h5 style="font-family:Indie Flower">First, name your recipe</h5>
   <div class="form-group">
-    <%= f.label :name, :class => 'control-label' %>
-    <%= f.text_field :name, :class => 'form-control' %>
+    <%= f.text_field :name, :class => 'form-control', :placeholder => "Name" %>
   </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.13/angular.min.js"></script>
@@ -25,34 +25,36 @@
     }
 
     $scope.searchText = '';
+
   });
   </script>
 
 
   <div ng-app="myApp" ng-controller="IngredientsController">
 
-    <div class="input-group has-feedback">
+    <h5 style="font-family:Indie Flower">Next pick some ingredients</h5>
+    <div class="input-group has-feedback margin-bottom-sm">
+      <span class="input-group-addon"><i class="fa fa-search"></i></span>
       <input ng-model="searchText" class="form-control" placeholder="Search">
-      <i class="glyphicon glyphicon-search form-control-feedback"></i>
     </div>
-
     <table class="table table-hover">
       <thead>
-        <th> <a ng-click="sort_by('name')">name</a> </th>
+        <th> <a ng-click="sort_by('name')">Name</a> </th>
       </thead>
       <tr ng-repeat="ingredient in ingredients| orderBy:order | filter:searchText">
-        <td>{{ingredient.name}}</td>
+        <td><input ng-model="ingredient.selected" value="{{ingredient.id}}" type="checkbox" name="ingredients[]"> {{ingredient.name}}</td>
       </tr>
     </table>
   </div>
 
+  <h5 style="font-family:Indie Flower">And finally, write the steps!</h5>
   <div class="form-group">
     <%= f.label :description, :class => 'control-label' %>
     <%= f.text_area :description, :class => 'form-control' %>
   </div>
 
   <div class="form-actions">
-    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= f.submit nil, :class => 'btn btn-success' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 recipes_path, :class => 'btn' %>
   </div>

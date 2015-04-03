@@ -6,4 +6,8 @@ class RecipeIngredient < ActiveRecord::Base
     args.each{|z, y| RecipeIngredient.create(recipe_id:z, ingredient_id:y)}
   end
 
+  def self.massCreate(recipe_id, ingredients)
+    ingredients.each{|x| RecipeIngredient.create(recipe_id:recipe_id, ingredient_id:x)}
+  end
+
 end
