@@ -6,6 +6,14 @@ FactoryGirl.define do
     admin true
   end
 
+  factory :userNoAdmin, class: User do
+    username "Jonne"
+    password "Foobar1"
+    password_confirmation "Foobar1"
+    admin false
+  end
+
+
   factory :recipe do
     name "Potut"
     user

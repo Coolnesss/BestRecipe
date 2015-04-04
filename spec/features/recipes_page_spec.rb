@@ -58,5 +58,14 @@ describe "Recipes page" do
         click_link('Destroy')
       }.to change{Recipe.count}.by(-1)
     end
-end
+
+    it "normal user cannot destroy recipes" do
+      FactoryGirl.create(:userNoAdmin)
+      sign_in(username:"Jonne", password:"Foobar1")
+
+      visit recipe_path(1)
+
+      expect(page).to_not have_content("Destroy")
+    end
+  end
 end

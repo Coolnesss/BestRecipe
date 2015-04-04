@@ -66,4 +66,17 @@ describe "User" do
       }.not_to change{User.first.updated_at}
     end
 
+    it "cannot sign in with bad credentials" do
+      visit signin_path
+      fill_in('username', with:"Pekka")
+      fill_in('password', with:"lol")
+      click_button('Log in')
+
+      expect(page).to have_content("mismatch")
+
+    end
+
+
+
+
 end
