@@ -5,6 +5,6 @@
 {<img src="https://codeclimate.com/github/Coolnesss/BestRecipe/badges/coverage.svg" />}[https://codeclimate.com/github/Coolnesss/BestRecipe]
 
 Site in production:
-https://bestrecipefor.me/
+http://bestrecipefor.me/
 
 {Trello board}[https://trello.com/b/BwtZyRGY/bestrecipe]
