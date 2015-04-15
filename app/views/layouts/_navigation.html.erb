@@ -1,3 +1,4 @@
+<link href='http://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 
 <%# some facebook js for the like & share buttons %>
 <div id="fb-root"></div>
@@ -9,35 +10,42 @@
     fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-<%# navigation styled for Bootstrap 3.0 %>
-<div class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"></button>
-      <div type="navbar-inner">
-        <a class="brand" href="/"><img src="https://raw.githubusercontent.com/Coolnesss/BestRecipe/master/app/assets/images/bestrecipelogo.png" style="padding: 5px; width: 50px; height: 50px"/></a>
-      </div>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a style="font-family:Indie Flower" class="navbar-brand" href=<%= root_path %>>BestRecipe</a>
     </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to 'Home', root_path %></li>
         <li><%= link_to "<i class='fa fa-cutlery fa-fw'></i> Recipes".html_safe, recipes_path, class: "btn" %></li>
         <li><%= link_to "<i class='fa fa-flask fa-fw'></i> Ingredients".html_safe, ingredients_path, class: "btn" %></li>
         <li><%= link_to "<i class='fa fa-users fa-fw'></i> Users".html_safe, users_path, class: "btn" %></li>
       </ul>
-
-     <% if not current_user.nil? %>
-        <div class="btn-group navbar-right" style="">
-          <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav navbar-right">
+        <% if not current_user.nil? %>
+          <ul class="nav navbar-nav" style="list-style: none;">
             <li><%= link_to "<i class='fa fa-user fa-fw'></i> #{current_user.username}".html_safe, current_user, class: "btn" %></li>
             <li><%= link_to "<i class='fa fa-plus-circle fa-fw'></i> New Recipe".html_safe, new_recipe_path, class: "btn", method: 'get' %></li>
             <li><%= link_to "<i class='fa fa-sign-out fa-fw'></i> Sign out".html_safe, signout_path, class: "btn", method: 'delete' %></li>
           </ul>
-        </div>
-      <% else %>
-        <ul class="nav navbar-nav navbar-right" style="list-style: none;">
+        <% else %>
+        <ul class="nav navbar-nav" style="list-style: none;">
           <li><%= link_to "<i class='fa fa-sign-in fa-fw'></i> Sign in".html_safe, signin_path, class: "btn" %></li>
           <li><%= link_to "<i class='fa fa-user-plus fa-fw'></i> Sign up".html_safe, signup_path, class: "btn" %></li>
         </ul>
-      <% end %>
-  </div>
-</div>
+        <% end %>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
